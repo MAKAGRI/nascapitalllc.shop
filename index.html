@@ -1,182 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAT Cargo VAD LLC</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        nav {
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            background: #111;
-            color: #fff;
-            min-height: 100vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero-text {
-            max-width: 500px;
-            padding: 20px;
-            animation: slideInLeft 1.5s ease;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hero-img img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-            animation: slideInRight 1.5s ease;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-        .contact {
-            background: #e9e9e9;
-            padding: 60px 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAS CAPITAL LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
+    header, footer { background: #0f172a; color: white; text-align: center; padding: 20px; }
+    nav a { color: #facc15; margin: 0 15px; text-decoration: none; font-weight: 600; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1554224155-6e1b00a2b33e?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white; height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    }
+    .hero h1 { font-size: 48px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .section-title { font-size: 28px; margin-bottom: 20px; color: #0f172a; text-align: center; }
+    .grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card {
+      background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .card img { width: 100%; border-radius: 6px; margin-bottom: 10px; }
+    a { color: #2563eb; }
+  </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">PAT Cargo VAD LLC</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<header>
+  <h1>NAS CAPITAL LLC</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#clients">Clients</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#mission">Mission</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <div class="hero" id="home">
-        <div class="hero-text">
-            <h1>PAT Cargo VAD LLC</h1>
-            <p>Your trusted partner in transportation and warehousing. We provide reliable cargo services and storage solutions to meet your business needs with efficiency and care.</p>
-        </div>
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=934&q=80" alt="Cargo Services">
-        </div>
-    </div>
+<div class="hero">
+  <h1>Empowering Finance with Clarity & Strategy</h1>
+</div>
 
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>PAT Cargo VAD LLC is a Domestic LLC based in Arizona, offering specialized services in transportation and warehousing. With a focus on reliability and customer satisfaction, we have been serving businesses since 2021.</p>
-        <p><strong>Registered Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
-    </div>
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p>NAS CAPITAL LLC is a trusted Illinois-based firm located in Chicago, focused on helping individuals and businesses make smarter financial moves. With a foundation of experience and a dedication to innovation, we are redefining capital strategy one client at a time.</p>
+</section>
 
-    <div class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@patcargovadllc.click">contact@patcargovadllc.click</a></p>
-        <p><strong>Agent Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
-    </div>
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card"><h3>📊 Financial Consulting</h3><p>Tailored insights for investments, debt management, and business growth.</p></div>
+    <div class="card"><h3>🏢 Business Structuring</h3><p>Helping you establish the right legal and tax-efficient entity.</p></div>
+    <div class="card"><h3>💸 Capital Planning</h3><p>Strategic planning for personal and enterprise-level capital needs.</p></div>
+  </div>
+</section>
 
-    <footer>
-        &copy; 2025 PAT Cargo VAD LLC. All rights reserved.
-    </footer>
+<section id="team">
+  <h2 class="section-title">Our Team</h2>
+  <div class="card">
+    <p><strong>Agent & Manager:</strong> Roma Shukla</p>
+    <p><strong>Location:</strong> Chicago, Illinois</p>
+  </div>
+</section>
 
-    <script>
-        // Intersection Observer for fade-in effect
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+<section id="clients">
+  <h2 class="section-title">Our Clients</h2>
+  <p>We proudly serve a diverse base of entrepreneurs, small businesses, and private individuals in search of trustworthy financial partnership.</p>
+</section>
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+<section id="gallery">
+  <h2 class="section-title">Gallery</h2>
+  <div class="grid">
+    <div class="card"><img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=600&q=80" alt="office"/><p>Modern office setup.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=600&q=80" alt="team"/><p>Our team at work.</p></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1573164574396-9d9a0c74f0b3?auto=format&fit=crop&w=600&q=80" alt="finance"/><p>Client financial planning session.</p></div>
+  </div>
+</section>
+
+<section id="mission">
+  <h2 class="section-title">Our Mission</h2>
+  <p>To bring financial transparency, long-term strategy, and personalized success to our clients.</p>
+</section>
+
+<section id="testimonials">
+  <h2 class="section-title">Testimonials</h2>
+  <p>"NAS Capital helped me organize my business finances in ways I never imagined." – A. Martinez</p>
+  <p>"Their team is attentive, professional, and highly skilled." – L. Carter</p>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="card">
+    <p><strong>Email:</strong> <a href="mailto:support@nascapitalllc.shop">support@nascapitalllc.shop</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+18158751237">(815) 875-1237</a></p>
+    <p><strong>City/State:</strong> Chicago, Illinois</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 NAS CAPITAL LLC. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
